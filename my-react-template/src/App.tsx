@@ -1,21 +1,21 @@
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 
-// Import the profile image from the src folder
+
 import profileImage from './assets/Me.jpg';
 
-// Header Component (Overlapping, Sticky with Black and White Design)
+
 const Header = () => {
   return (
     <header className="fixed top-0 left-0 w-full p-6 bg-black text-white shadow-lg z-10">
-      {/* Header Layout: "Logan Smith" stays on the right */}
+   
       <div className="flex justify-between items-center">
         <nav className="flex space-x-6 text-lg">
           <li><Link to="/portfolio" className="hover:text-gray-400 transition duration-300">Portfolio</Link></li>
           <li><Link to="/contact" className="hover:text-gray-400 transition duration-300">Contact</Link></li>
           <li><Link to="/resume" className="hover:text-gray-400 transition duration-300">Resume</Link></li>
         </nav>
-        {/* Logan Smith stays on the right */}
+      
         <h1 className="text-4xl font-extrabold">
           <Link to="/" className="hover:text-gray-400 transition duration-300">
             Logan Smith
@@ -26,7 +26,7 @@ const Header = () => {
   );
 };
 
-// Footer Component with LinkedIn and GitHub icons (Black and White Design)
+
 const Footer = () => {
   return (
     <footer className="flex justify-center items-center p-6 bg-black text-white mt-12">
@@ -50,14 +50,14 @@ const Footer = () => {
   );
 };
 
-// About Me Component (Centered Profile Picture and Adjusted Layout)
+
 const About = () => {
   return (
-    <section className="bg-white text-black min-h-screen pt-32 px-6 text-center">
-      {/* Profile Picture */}
+    <section className="bg-white text-black pt-32 px-6 text-center">
+   
       <div className="flex justify-center">
         <img 
-          src={profileImage} // Image imported from src/assets/Me.jpg
+          src={profileImage}
           alt="Logan Smith"
           className="w-32 h-32 rounded-full mb-4 shadow-lg border-4 border-black"  
         />
@@ -74,7 +74,6 @@ const About = () => {
   );
 };
 
-// Contact Form Component (Modern and Spacious Form)
 const Contact = () => {
   return (
     <section className="max-w-5xl mx-auto p-12 bg-white rounded-md shadow-2xl">
@@ -121,7 +120,6 @@ const Contact = () => {
   );
 };
 
-// Resume Component (Elegant Resume Section with Black and White Theme)
 const Resume = () => {
   return (
     <section className="bg-white p-12 rounded-md shadow-lg">
@@ -129,7 +127,7 @@ const Resume = () => {
       <p className="text-lg text-gray-700 leading-relaxed mb-6">
         You can view my resume or download it here:
         <a 
-          href="https://docs.google.com/document/d/1zr9TVR89iafJF83Ob1Xu8tcWCREcQHcBQHSwDZUgKmM/edit?usp=sharing"  // Correct path to the PDF in the public folder
+          href="https://docs.google.com/document/d/1zr9TVR89iafJF83Ob1Xu8tcWCREcQHcBQHSwDZUgKmM/edit?usp=sharing" 
           className="text-black hover:underline"
           target="_blank" 
           rel="noopener noreferrer"
@@ -141,7 +139,6 @@ const Resume = () => {
   );
 };
 
-// Portfolio Component (Black and White Modern Styling for Languages)
 const Portfolio = () => {
   const languages = [
     "JavaScript",
@@ -167,7 +164,6 @@ const Portfolio = () => {
   );
 };
 
-// Main App Component (Black and White Design)
 const App = () => {
   return (
     <Router>
@@ -178,7 +174,7 @@ const App = () => {
             <Route path="/" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/resume" element={<Resume />} />
-            <Route path="/portfolio" element={<Portfolio />} />  {/* Portfolio page for languages */}
+            <Route path="/portfolio" element={<Portfolio />} />
           </Routes>
         </main>
         <Footer />
