@@ -3,33 +3,30 @@ import profileImage from "../assets/Me.jpg";
 
 const About: React.FC = () => {
   return (
-    <section className="flex flex-col items-center text-center pt-32 px-6">
-      <div className="relative">
+    <section className="flex flex-row items-center text-left pt-32 px-6 max-w-7xl mx-auto gap-24">
+      <div className="flex-1 space-y-6">
+        <p className="text-lg text-gray-700 leading-relaxed max-w-lg">
+          I am passionate about working with my hands and creating things that inspire me. 
+          From 3D printing to web development, I aim to build functional solutions that 
+          further my career and help others.
+        </p>
+        <div className="flex justify-center pt-20">
+          <Link 
+            to="/contact" 
+            className="bg-black text-white py-4 px-10 rounded-lg text-xl font-semibold transition-all duration-300 
+                     hover:bg-gray-800 hover:scale-105 shadow-lg hover:shadow-xl"
+          >
+            Get in Touch
+          </Link>
+        </div>
+      </div>
+      <div className="flex-1 flex justify-center">
         <img 
           src={profileImage}
           alt="Logan Smith"
-          className="w-40 h-40 rounded-full shadow-2xl border-4 border-black transition-transform duration-300 hover:scale-105"
+          className="w-96 h-96 rounded-full shadow-lg border-4 border-gray-300 transition-transform duration-300 hover:scale-105"
         />
       </div>
-
-      <h2 className="text-5xl font-extrabold bg-gradient-to-r from-black via-gray-700 to-black text-transparent bg-clip-text 
-                     leading-tight whitespace-nowrap mt-6">
-        Hi, I'm Logan Smith
-      </h2>
-
-      <p className="text-lg text-gray-700 leading-relaxed mt-4 max-w-lg">
-        I am passionate about working with my hands and creating things that inspire me. 
-        From 3D printing to web development, I aim to build functional solutions that 
-        further my career and help others.
-      </p>
-
-      <Link 
-        to="/contact" 
-        className="mt-6 bg-black text-white py-3 px-8 rounded-lg text-xl font-semibold transition-all duration-300 
-                   hover:bg-gray-800 hover:scale-105 shadow-lg hover:shadow-xl"
-      >
-        Get in Touch
-      </Link>
     </section>
   );
 };
