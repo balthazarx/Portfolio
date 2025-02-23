@@ -2,16 +2,16 @@ import { Link } from "react-router-dom";
 
 const Header: React.FC = () => {
   return (
-    <header className="fixed top-0 left-0 w-full p-6 bg-black text-white shadow-lg z-10">
+    <header className="fixed top-0 left-0 w-full p-6 bg-white text-black shadow-md z-10 border-b border-gray-300">
       <div className="flex justify-between items-center max-w-7xl mx-auto">
-        <nav className="flex space-x-6 text-lg">
-          <Link to="/portfolio" className="hover:text-gray-400 transition duration-300">Portfolio</Link>
-          <Link to="/contact" className="hover:text-gray-400 transition duration-300">Contact</Link>
-          <Link to="/resume" className="hover:text-gray-400 transition duration-300">Resume</Link>
-        </nav>
-        <h1 className="text-4xl font-extrabold">
-          <Link to="/" className="hover:text-gray-400 transition duration-300">Logan Smith</Link>
+        <h1 className="text-4xl font-extrabold tracking-wide">
+          <Link to="/" className="hover:text-gray-600 transition duration-300">LOGAN SMITH</Link>
         </h1>
+        <nav className="flex space-x-6 text-lg items-center">
+          <Link to="/portfolio" className="hover:text-gray-600 transition duration-300">LANGUAGES</Link>
+          <span>|</span>
+          <Link to="/resume" className="hover:text-gray-600 transition duration-300">RESUME</Link>
+        </nav>
       </div>
     </header>
   );
